@@ -6,11 +6,11 @@ interface InfiniteScrollProps {
   threshold?: number;
 }
 
-const InfiniteScroll: React.FC<InfiniteScrollProps> = ({
+const InfiniteScroll = ({
   loadMore,
   hasMore,
   threshold = 200,
-}) => {
+}: InfiniteScrollProps) => {
   const loaderRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
